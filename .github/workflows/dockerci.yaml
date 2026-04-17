@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          tags: sfisowandile/python-app:${GITHUB_SHA::6}
+          tags: sfisowandile/python-app:${{github.sha}}
