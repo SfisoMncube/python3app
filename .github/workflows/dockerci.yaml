@@ -34,14 +34,18 @@ jobs:
     needs: docker
     runs-on: self-hosted
     steps:
+
     - name: value file
       shell: bash
       run: |
-        echo ${{needs.docker.outputs.commit_id}}
-        sudo apt update
-        sudo apt install python3 python3-pip -y
-        pip install yq
-        yq -Yi '.image.tag = "${{needs.docker.outputs.commit_id}}' charts/python-app/values.yaml
+        echo ${{ needs.docker.outputs.commit_id }}
+        # install go-based yq (recommended)
+        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
+
+        # update image tag in values.yaml
+        yq e '.image.tag = "${{ needs.docker.outputs.commit_id }}"' \
+        -i charts/python-app/values.yaml
     
 
     - name: commit changes
