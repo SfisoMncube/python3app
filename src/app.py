@@ -11,7 +11,7 @@ def details():
         "time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "hostname": socket.gethostname(),
         "message": "You are doing Great!!",
-        "deployed_on": "K8s",
+        "deployed_on": "Kubernetes",
         "deployed_for": "Cloud Platform Engineer"
 
     }
