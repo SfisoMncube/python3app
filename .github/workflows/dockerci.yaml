@@ -43,7 +43,7 @@ jobs:
     
 
     - name: commit changes
-      uses: EndBug/add-andcommit@v9
+      uses: EndBug/add-and-commit@v9
       with:
         messages: "Update the yaml"
 
