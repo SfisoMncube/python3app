@@ -6,6 +6,7 @@ metadata:
     # Example for optional annotations
   annotations:
     github.com/project-slug: SfisoMncube/python3app
+    backstage.io/techdocs-ref: dir:.
     #   backstage.io/techdocs-ref: dir:.
 spec:
   type: service
