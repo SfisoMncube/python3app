@@ -40,8 +40,8 @@ jobs:
       run: |
         echo ${{ needs.docker.outputs.commit_id }}
         # install go-based yq (recommended)
-        sudo apt install wget -y
-        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+        sudo curl -sL https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 \
+        -o /usr/local/bin/yq
         sudo chmod +x /usr/local/bin/yq
 
         # update image tag in values.yaml
