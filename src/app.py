@@ -12,7 +12,7 @@ def details():
         "hostname": socket.gethostname(),
         "message": "You are doing Great",
         "deployed_on": "Kubernetes",
-        "deployed_for": "Platform Engineer"
+        "deployed_for": "Cloud Platform Engineer"
 
     }
 
