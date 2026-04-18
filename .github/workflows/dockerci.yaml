@@ -39,7 +39,7 @@ jobs:
       run: |
         echo ${{needs.docker.outputs.commit_id}}
         sudo apt update
-        sudo apt install python3 python3-pip
+        sudo apt install python3 python3-pip -y
         pip install yq
         yq -Yi '.image.tag = "${{needs.docker.outputs.commit_id}}' charts/python-app/values.yaml
     
