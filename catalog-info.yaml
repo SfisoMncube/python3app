@@ -4,8 +4,8 @@ metadata:
   name: python-app
   description: This is our flask API
     # Example for optional annotations
-    annotations:
-      github.com/project-slug: SfisoMncube/python3app
+  annotations:
+    github.com/project-slug: SfisoMncube/python3app
     #   backstage.io/techdocs-ref: dir:.
 spec:
   type: service
